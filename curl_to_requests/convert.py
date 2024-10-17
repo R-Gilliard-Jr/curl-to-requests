@@ -1,5 +1,4 @@
-import functools
-import re
+from .curl_to_requests import curl_to_requests
 
 from flask import (
     Blueprint, flash, g, redirect, render_template, request, url_for
@@ -20,7 +19,7 @@ def index():
         if error is not None:
             flash(error)
         else:
-            print(curl_request)
+            curl_to_requests(curl_request)
 
 
     return render_template('index.html')
