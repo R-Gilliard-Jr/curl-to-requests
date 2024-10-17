@@ -22,6 +22,7 @@ def curl_to_requests(curl_request: str) -> str:
         headers.append(header)
 
     # Parse the data
+    data = None
     if re.search('--data-raw', headers[-1]):
         headers[-1], data = headers[-1].split('--data-raw')
         headers[-1] = "    " + headers[-1].strip()
