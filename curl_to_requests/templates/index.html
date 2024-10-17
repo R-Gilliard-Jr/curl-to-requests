@@ -2,13 +2,13 @@
 {% extends 'base.html' %}
 
 {% block header %}
-  <h1>{% block title %}Convert curl to Python requests{% endblock %}</h1>
+    <h1>{% block title %}Convert curl to Python requests{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
-  <form method="post">
-    <label for="url_request">Request</label>
-    <textarea name="curl_request" id="url_request">{{ request.form['url_request'] }}</textarea>
-    <input type="submit" value="convert">
-  </form>
+    <form method="post">
+        <label for="url_request">Request</label>
+        <textarea name="curl_request" id="url_request">{{ request.form['url_request'] }}</textarea>
+        <input type="submit" value="convert">
+    </form>
 {% endblock %}
